@@ -28,7 +28,6 @@ class AppViewModel(
     fun onEvent(event: ScreenEvent) {
         when (event) {
             is ScreenEvent.DeleteStudent -> viewModelScope.launch { dao.deleteStudent(event.student) }
-            is ScreenEvent.SelectStudent -> _state.update { it.copy(selectedId = event.student.id) }
             is ScreenEvent.SetAddress -> _state.update { it.copy(address = event.address) }
             is ScreenEvent.SetDob -> _state.update { it.copy(dob = event.dob) }
             is ScreenEvent.SetFirstName -> _state.update { it.copy(firstName = event.firstName) }
