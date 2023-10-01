@@ -4,7 +4,7 @@ package com.example.jcasd.data.local
 sealed interface ScreenEvent {
     // form events
     object SaveStudent : ScreenEvent
-    data class SelectStudent(val student: Student) : ScreenEvent
+
     data class SetFirstName(val firstName: String) : ScreenEvent
     data class SetLastName(val lastName: String) : ScreenEvent
     data class SetKlass(val klass: String) : ScreenEvent
