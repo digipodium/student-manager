@@ -1,5 +1,7 @@
 package com.example.jcasd.data.local
 
+import android.net.Uri
+
 // step 10 create an event interface, rename it to your liking
 sealed interface ScreenEvent {
     // form events
@@ -9,7 +11,7 @@ sealed interface ScreenEvent {
     data class SetLastName(val lastName: String) : ScreenEvent
     data class SetKlass(val klass: String) : ScreenEvent
     data class SetSubjects(val subjects: String) : ScreenEvent
-    data class SetImage(val image: String) : ScreenEvent
+    data class SetImage(val image: Uri) : ScreenEvent
     data class SetGender(val gender: String) : ScreenEvent
     data class SetDob(val dob: String) : ScreenEvent
     data class SetAddress(val address: String) : ScreenEvent

@@ -1,5 +1,7 @@
 package com.example.jcasd.data.local
 
+import android.net.Uri
+
 // step 13 create a ui state data class, rename it to your liking
 
 enum class SortType {
@@ -7,12 +9,14 @@ enum class SortType {
     LAST_NAME,
     CLASS
 }
+
 enum class ResponseType {
     SUCCESS,
     ERROR,
     LOADING,
     EMPTY
 }
+
 data class UiState(
     val students: List<Student> = emptyList(),
     val firstName: String = "",
@@ -22,7 +26,7 @@ data class UiState(
     val gender: String = "",
     val dob: String = "",
     val address: String = "",
-    val image: String = "",
+    val image: Uri? = null,
     val selectedStudent: Student = Student(),
     val sortOrder: SortType = SortType.FIRST_NAME,
     val responseType: ResponseType = ResponseType.EMPTY,
