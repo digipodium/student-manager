@@ -23,7 +23,7 @@ data class UiState(
     val dob: String = "",
     val address: String = "",
     val image: String = "",
-    val selectedId: Int = 0,
+    val selectedStudent: Student = Student(),
     val sortOrder: SortType = SortType.FIRST_NAME,
     val responseType: ResponseType = ResponseType.EMPTY,
 )
